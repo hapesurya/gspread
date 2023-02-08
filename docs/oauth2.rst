@@ -143,15 +143,15 @@ This is the case where your application or a script is accessing spreadsheets on
 1. :ref:`enable-api-access` if you haven't done it yet.
 #. Go to "APIs & Services > OAuth Consent Screen." Click the button for "Configure Consent Screen".
 
-  a. In the "1 OAuth consent screen" tab, give your app a name and fill the "User support email" and "Developer contact information". Click "SAVE AND CONTINUE".
+  a. In the "1 OAuth consent screen" tab, give your app a name and fill the "User support email" and "Developer contact information". Also you can choose to use for your "internal" or "external". Hint: Internal mean using your same email address. External mean using different email address. Then Click "SAVE AND CONTINUE". 
   #. There is no need to fill in anything in the tab "2 Scopes", just click "SAVE AND CONTINUE".
-  #. In the tab "3 Test users", add the Google account email of the end user, typically your own Google email. Click "SAVE AND CONTINUE".
-  #. Double check the "4 Summary" presented and click "BACK TO DASHBOARD".
+  #. (If this tab appeared) In the tab "Test users", add the Google account email of the end user, typically your own Google email. Click "SAVE AND CONTINUE".
+  #. Double check the "3 Summary" presented and click "BACK TO DASHBOARD".
 
 3. Go to "APIs & Services > Credentials"
 #. Click "+ Create credentials" at the top, then select "OAuth client ID".
 #. Select "Desktop app", name the credentials and click "Create". Click "Ok" in the "OAuth client created" popup.
-#. Download the credentials by clicking the Download JSON button in "OAuth 2.0 Client IDs" section.
+#. Copy your "Client ID" and "Client Secret". For your backup, you can also download the credentials by clicking the Download JSON button in "OAuth 2.0 Client IDs" section. Hint: If you need this code in future, you can Go to "APIs & Services > Credential" tab.
 #. Move the downloaded file to ``~/.config/gspread/credentials.json``. Windows users should put this file to ``%APPDATA%\gspread\credentials.json``.
 
 Create a new Python file with this code:
